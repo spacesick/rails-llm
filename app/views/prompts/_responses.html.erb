@@ -1,0 +1,8 @@
+<div id="responses" class="overflow-auto flex-grow" data-scroll-target="responses">
+  <% @prompts.each do |prompt| %>
+    <div>
+      <%= render "prompts/input", content: prompt.text %>
+      <%= render "prompts/response", content: prompt.response %>
+    </div>
+  <% end %>
+</div>

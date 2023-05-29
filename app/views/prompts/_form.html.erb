@@ -1,0 +1,22 @@
+<%=
+  form_tag prompts_path,
+    method: :post,
+    id: "prompt_form",
+    class: "flex flex-col flex-grow prompt_form" do
+%>
+  <%=
+    text_area_tag :prompt,
+      nil,
+      required: true,
+      placeholder: "Type your prompt here",
+      class: "flex-grow",
+      rows: 4
+  %>
+  <div class="justify-self-end">
+    <%=
+      submit_tag "Submit",
+        name: nil,
+        class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    %>
+  </div>
+<% end %>
