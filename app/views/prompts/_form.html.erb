@@ -2,21 +2,21 @@
   form_tag prompts_path,
     method: :post,
     id: "prompt_form",
-    class: "flex flex-col flex-grow prompt_form" do
+    class: "prompt_form w-full justify-center items-center text-sm py-6 px-20 lg:px-28 xl:px-40 pb-6 bg-zinc-900" do
 %>
   <%=
     text_area_tag :prompt,
       nil,
       required: true,
       placeholder: "Type your prompt here",
-      class: "flex-grow",
+      class: "flex-grow w-full py-2 px-3 rounded-sm bg-gray-300",
       rows: 4
   %>
-  <div class="justify-self-end">
+  <div class="flex justify-end pt-2">
     <%=
       submit_tag "Submit",
         name: nil,
-        class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        class: "bg-teal-800 hover:bg-sky-900 disabled:bg-sky-900 disabled:opacity-50 text-white py-2 px-5 rounded transition-all"
     %>
   </div>
 <% end %>
